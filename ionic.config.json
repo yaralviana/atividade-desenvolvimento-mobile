@@ -1,0 +1,7 @@
+{
+  "name": "atividade-desenvolvimento-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
