@@ -1,13 +1,83 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <h4 style="text-align: center; margin-left: -40px"></h4>
   </ion-toolbar>
+  <ion-menu contentId="main-content" style="height: 100vh">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-tab-button
+        style="
+          display: flex;
+          justify-content: center;
+          width: 100% !important;
+          height: 50px !important;
+        "
+        href="home"
+      >
+        <h4><ion-icon aria-hidden="true" name="home" color="primary"></ion-icon> Home</h4>
+      </ion-tab-button>
+      <ion-tab-button
+        style="
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 50px !important;
+        "
+        href="userinfo"
+      >
+      <h4><ion-icon aria-hidden="true" name="person-circle" color="primary"></ion-icon>Dados</h4>
+      </ion-tab-button>
+      <ion-tab-button
+        style="
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 50px !important;
+        "
+         href="login"
+      >
+      <h4><ion-icon aria-hidden="true" name="log-in" color="primary"></ion-icon> Login</h4>
+      </ion-tab-button>
+      
+      <ion-tab-button
+        style="
+          display: flex;
+          text-align: left !important;
+          width: 100%;
+          height: 50px !important;
+        "
+         href='badges'
+      >
+       <h4><ion-icon aria-hidden="true" name="planet" color="primary"></ion-icon> Badge</h4>
+      </ion-tab-button>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Usuário</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="login()">Entrar</ion-button>
 </ion-content>

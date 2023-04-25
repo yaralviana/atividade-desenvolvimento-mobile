@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <h4 style="text-align: center; margin-left: -40px">Home</h4>
   </ion-toolbar>
-  <ion-menu style="height: 100vh !important" contentId="main-content">
+  <ion-menu contentId="main-content" style="height: 100vh">
     <ion-header>
       <ion-toolbar>
         <ion-title></ion-title>
@@ -19,7 +19,7 @@
           width: 100% !important;
           height: 50px !important;
         "
-        tab="home"
+        href="home"
       >
         <h4><ion-icon aria-hidden="true" name="home" color="primary"></ion-icon> Home</h4>
       </ion-tab-button>
@@ -30,9 +30,9 @@
           width: 100%;
           height: 50px !important;
         "
-        tab="tab2"
+        href="userinfo"
       >
-        <h4><ion-icon aria-hidden="true" name="home" color="primary"></ion-icon> Dados</h4>
+      <h4><ion-icon aria-hidden="true" name="person-circle" color="primary"></ion-icon>Dados</h4>
       </ion-tab-button>
       <ion-tab-button
         style="
@@ -41,9 +41,9 @@
           width: 100%;
           height: 50px !important;
         "
-         url="tab3"
+         href="login"
       >
-        <h4><ion-icon aria-hidden="true" name="home" color="primary"></ion-icon> Login</h4>
+      <h4><ion-icon aria-hidden="true" name="log-in" color="primary"></ion-icon> Login</h4>
       </ion-tab-button>
       
       <ion-tab-button
