@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <h4 style="text-align: center; margin-left: -40px">Home</h4>
+    <h4 style="text-align: center; margin-left: -40px">Dados do usuário</h4>
   </ion-toolbar>
   <ion-menu style="height: 100vh !important" contentId="main-content">
     <ion-header>
@@ -68,30 +68,16 @@
   </div>
 </ion-header>
 
-<ion-content style="max-height: 100px !important">
-  <h2 style="text-align: center; margin-top: 2rem">Livros recomendados</h2>
-</ion-content>
-<ion-content>
-  <ion-list class="listaTeste" [inset]="true">
-    <ion-item>
-      <ion-button id="open-toast" expand="block" shape="round"><ion-label>The Pragmatic Programmer </ion-label></ion-button>
-      <ion-toast trigger="open-toast" message="Você clicou em The Pragmatic Programmer by David Thomas & Andrew Hunt" [duration]="1000"></ion-toast>
-    </ion-item>
-    <ion-item>
-      <ion-button id="open-toast2" expand="block" shape="round"><ion-label>Clean Code</ion-label></ion-button>
-      <ion-toast trigger="open-toast2" message="Você clicou em Clean Code by Robert C. Martin" [duration]="1000"></ion-toast>
-    </ion-item>
-    <ion-item>
-      <ion-button id="open-toast3" expand="block" shape="round"><ion-label>Code Complete</ion-label></ion-button>
-      <ion-toast trigger="open-toast3" message="Você clicou em Code Complete" [duration]="3000"></ion-toast>
-    </ion-item>
-    <ion-item>
-      <ion-button id="open-toast4" expand="block" shape="round"><ion-label>Refactoring</ion-label></ion-button>
-      <ion-toast trigger="open-toast4" message="Você clicou em Refactoring by Martin Fowler" [duration]="1000"></ion-toast>
-    </ion-item>
-    <ion-item>
-      <ion-button id="open-toast5" expand="block" shape="round"><ion-label>Head First Design Patterns</ion-label></ion-button>
-      <ion-toast trigger="open-toast5" message="Você clicou em Head First Design Patterns by Eric Freeman / Bert Bates / Kathy Sierra / Elisabeth Robson" [duration]="3000"></ion-toast>
-    </ion-item>
-  </ion-list>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Dados do Usuário</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Email: {{email}}</p>
+      <p>Telefone: {{telefone}}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" (click)="showAlert()">Informe seus dados</ion-button>
+  
 </ion-content>
